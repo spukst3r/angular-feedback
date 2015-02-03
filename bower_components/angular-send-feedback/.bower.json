@@ -1,0 +1,14 @@
+{
+  "name": "angular-send-feedback",
+  "homepage": "https://github.com/jacobscarter/angular-feedback",
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "f37629de2802c2bc391ac996ec988c67193dbf2f"
+  },
+  "_source": "git://github.com/jacobscarter/angular-feedback.git",
+  "_target": "*",
+  "_originalSource": "angular-send-feedback"
+}

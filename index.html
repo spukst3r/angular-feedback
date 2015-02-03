@@ -7,13 +7,14 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-send-feedback/dist/angular-send-feedback.css">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <title>Angular-feedback by jacobscarter</title>
   </head>
 
-  <body>
+  <body ng-app="myApp" ng-controller="mainController">
     <div id="container">
       <div class="inner">
 
@@ -251,5 +252,12 @@ I'm not exactly sure whether it's a good thing or not, but Google has it, so yea
         
       </div>
     </div>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/html2canvas/build/html2canvas.js"></script>
+    <script src="bower_components/angular-send-feedback/dist/angular-send-feedback.js"></script>
+    <script src="javascripts/app.js"></script>
+    <angular-feedback options="options"></angular-feedback>
   </body>
 </html>
