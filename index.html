@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Angular-feedback by jacobscarter</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Angular-feedback</h1>
+          <h2>Feedback directive similar to Google Feedback</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/jacobscarter/angular-feedback/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/jacobscarter/angular-feedback/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/jacobscarter/angular-feedback" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="angular-feedback" class="anchor" href="#angular-feedback" aria-hidden="true"><span class="octicon octicon-link"></span></a>angular-feedback</h1>
+
+<p>Feedback directive similar to Google Feedback</p>
+
+<p>This directive was built using <a href="http://github.com/ivoviz">ivoviz's</a> feedback repo.</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p><code>bower install angular-send-feedback</code></p>
+
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<ul>
+<li>jQuery</li>
+<li>html2canvas</li>
+</ul>
+
+<h2>
+<a id="use" class="anchor" href="#use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use</h2>
+
+<p><code>&lt;angular-feedback options="options"&gt;&lt;/angular-feedback&gt;</code></p>
+
+<p>The options attribute is connected to a <code>$scope</code> value in your controller, you can use this object to change/modify any of the options listed below.</p>
+
+<h2>
+<a id="post-data" class="anchor" href="#post-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Post Data</h2>
+
+<p>The information from the client will be sent through ajax post request. The information is in JSON format.</p>
+
+<ul>
+<li>
+<code>post.browser</code> - Browser information.</li>
+<li>
+<code>post.url</code> - The page URL.</li>
+<li>
+<code>post.note</code> - Description of the feedback.</li>
+<li>
+<code>post.img</code> - The screenshot of the feedback. - <strong>base64 encoded data URI!</strong>
+</li>
+<li>
+<code>post.html</code> - The structure of the page.</li>
+</ul>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<h3>
+<a id="ajaxurl-string" class="anchor" href="#ajaxurl-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>ajaxURL (String)</h3>
+
+<p>The URL where the plugin will post the screenshot and additional informations. (JSON datatype)</p>
+
+<p><code>Default: ''</code></p>
+
+<h3>
+<a id="postbrowserinfo-boolean" class="anchor" href="#postbrowserinfo-boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>postBrowserInfo (Boolean)</h3>
+
+<p>Whether you want your client to post their browser information (such as useragent, plugins used, etc.)</p>
+
+<p><code>Default: true</code></p>
+
+<h3>
+<a id="posthtml-boolean" class="anchor" href="#posthtml-boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>postHTML (Boolean)</h3>
+
+<p>Whether you want your client to post the page's HTML structure.</p>
+
+<p><code>Default: true</code></p>
+
+<h3>
+<a id="posturl-boolean" class="anchor" href="#posturl-boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>postURL (Boolean)</h3>
+
+<p>Whether you want your client to post the URL of the page.</p>
+
+<p><code>Default: true</code></p>
+
+<h3>
+<a id="proxy-string" class="anchor" href="#proxy-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>proxy (String)</h3>
+
+<p>Url to the proxy which is to be used for loading cross-origin images. If left empty, cross-origin images won't be loaded.</p>
+
+<p><code>Default: ''</code></p>
+
+<h3>
+<a id="letterrendering-boolean" class="anchor" href="#letterrendering-boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>letterRendering (Boolean)</h3>
+
+<p>Whether to render each letter seperately. Necessary if letter-spacing is used.</p>
+
+<p><code>Default: false</code></p>
+
+<h3>
+<a id="initbuttontext-string--html" class="anchor" href="#initbuttontext-string--html" aria-hidden="true"><span class="octicon octicon-link"></span></a>initButtonText (String / HTML)</h3>
+
+<p>The default button text.</p>
+
+<p><code>Default: Send feedback</code></p>
+
+<h3>
+<a id="strokestyle-string--hex-color" class="anchor" href="#strokestyle-string--hex-color" aria-hidden="true"><span class="octicon octicon-link"></span></a>strokeStyle (String / HEX color)</h3>
+
+<p>The color of the highlight border. You can use values either like 'black', 'red', etc. or HEX codes like '#adadad'.</p>
+
+<p><code>Default: black</code></p>
+
+<h3>
+<a id="shadowcolor-string--hex-color" class="anchor" href="#shadowcolor-string--hex-color" aria-hidden="true"><span class="octicon octicon-link"></span></a>shadowColor (String / HEX color)</h3>
+
+<p>The color of the shadow.</p>
+
+<p><code>Default: black</code></p>
+
+<h3>
+<a id="shadowoffsetx--shadowoffsety-integer" class="anchor" href="#shadowoffsetx--shadowoffsety-integer" aria-hidden="true"><span class="octicon octicon-link"></span></a>shadowOffsetX / shadowOffsetY (Integer)</h3>
+
+<p>Sets the horizontal / vertical distance of the shadow from the shape.</p>
+
+<p><code>Default: 1</code></p>
+
+<h3>
+<a id="shadowblur-integer" class="anchor" href="#shadowblur-integer" aria-hidden="true"><span class="octicon octicon-link"></span></a>shadowBlur (Integer)</h3>
+
+<p>The blur level for the shadow.</p>
+
+<p><code>Default: black</code></p>
+
+<h3>
+<a id="linejoin-string" class="anchor" href="#linejoin-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>lineJoin (String)</h3>
+
+<p>Sets the type of corner created, when two lines meet.</p>
+
+<p><code>Default: bevel</code></p>
+
+<h3>
+<a id="linewidth-integer" class="anchor" href="#linewidth-integer" aria-hidden="true"><span class="octicon octicon-link"></span></a>lineWidth (Integer)</h3>
+
+<p>Sets border of the highlighted area.</p>
+
+<p><code>Default: 3</code></p>
+
+<h3>
+<a id="html2canvasurl-string" class="anchor" href="#html2canvasurl-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>html2canvasURL (String)</h3>
+
+<p>The URL where the plugin can download html2canvas.js from.</p>
+
+<p><code>Default: html2canvas.js</code></p>
+
+<h3>
+<a id="tpldescription--tplhighlighter--tploverview--tplsubmitsuccess--tplsubmiterror-string--html" class="anchor" href="#tpldescription--tplhighlighter--tploverview--tplsubmitsuccess--tplsubmiterror-string--html" aria-hidden="true"><span class="octicon octicon-link"></span></a>tpl.description / tpl.highlighter / tpl.overview / tpl.submitSuccess / tpl.submitError (String / HTML)</h3>
+
+<p>The template of the plugin. You could change it any time, but keep in mind to keep the elements' ids and classes so the script won't break.</p>
+
+<p><code>Default: ...</code></p>
+
+<h3>
+<a id="onclose-function" class="anchor" href="#onclose-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>onClose (Function)</h3>
+
+<p>Function that runs when you close the plugin.</p>
+
+<p><code>Default: null</code></p>
+
+<h3>
+<a id="screenshotstroke-boolean" class="anchor" href="#screenshotstroke-boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>screenshotStroke (Boolean)</h3>
+
+<p>Changing to <code>false</code> will remove the borders from the highlighted areas when taking the screenshot.</p>
+
+<p><code>Default: true</code></p>
+
+<h3>
+<a id="highlightelement-boolean" class="anchor" href="#highlightelement-boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>highlightElement (Boolean)</h3>
+
+<p>By default when you move your cursor over an element the plugin will temporarily highlight it until you move your cursor out of that area.
+I'm not exactly sure whether it's a good thing or not, but Google has it, so yeah.</p>
+
+<p><code>Default: true</code></p>
+
+<h3>
+<a id="initialbox-boolean" class="anchor" href="#initialbox-boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>initialBox (Boolean)</h3>
+
+<p>By Setting this true the user will have to describe the bug/idea before being able to highlight the area.</p>
+
+<p><code>Default: false</code></p>
+
+<h3>
+<a id="feedbackbutton-string" class="anchor" href="#feedbackbutton-string" aria-hidden="true"><span class="octicon octicon-link"></span></a>feedbackButton (String)</h3>
+
+<p>Define a custom button instead of the default button that appears on the lower right corner.</p>
+
+<p><code>Default: .feedback-btn</code></p>
+
+<h3>
+<a id="showdescriptionmodal-boolean" class="anchor" href="#showdescriptionmodal-boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>showDescriptionModal (Boolean)</h3>
+
+<p>Sets whether the next modal for entering description should appear or not</p>
+
+<p><code>Default: true</code></p>
+
+<h3>
+<a id="onscreenshottaken-function" class="anchor" href="#onscreenshottaken-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>onScreenshotTaken (Function)</h3>
+
+<p>A callback function to be called when clicking on take screenshot button. The callback function's prototype is <code>function(post)</code></p>
+
+<p><code>Default: {}</code></p>
+
+<h3>
+<a id="isdraggable-boolean" class="anchor" href="#isdraggable-boolean" aria-hidden="true"><span class="octicon octicon-link"></span></a>isDraggable (Boolean)</h3>
+
+<p>Sets whether the user will be able to drag the feedback options modal or not</p>
+
+<p><code>Default: true</code></p>
+        </section>
+
+        <footer>
+          Angular-feedback is maintained by <a href="https://github.com/jacobscarter">jacobscarter</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
