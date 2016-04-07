@@ -2,8 +2,8 @@
   "name": "angular-send-feedback",
   "description": "Angular feedback directive similar to Google Feedback",
   "version": "1.0.2",
-  "filename": "angular-send-feedback.min.js",
-  "main": "./dist/angular-send-feedback.min.js",
+  "filename": "angular-send-feedback.js",
+  "main": "./dist/angular-send-feedback.js",
   "homepage": "https://github.com/jacobscarter/angular-feedback",
   "author": "Jacob Carter <jacob@ieksolutions.com>",
   "repository": {
