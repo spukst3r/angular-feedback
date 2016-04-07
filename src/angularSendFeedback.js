@@ -517,16 +517,13 @@ angular.module('angular-send-feedback').directive('angularFeedback', [
 
                       post.img = img;
                       post.note = $('#feedback-note').val();
-                      var data = {feedback: JSON.stringify(post)};
-                      $http({
-                        url: settings.ajaxURL,
-                        method: 'POST',
-                        data: data,
-                      }).then(function() {
-                        $('#feedback-module').append(settings.tpl.submitSuccess);
-                      }, function() {
-                        $('#feedback-module').append(settings.tpl.submitError);
-                      });
+
+                      $http.post(settings.ajaxURL, post)
+                        .then(function() {
+                          $('#feedback-module').append(settings.tpl.submitSuccess);
+                        }, function() {
+                          $('#feedback-module').append(settings.tpl.submitError);
+                        });
                     }
                     else {
                       $('#feedback-overview-error').show();
