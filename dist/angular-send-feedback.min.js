@@ -1,6 +1,6 @@
 /**
  * Angular feedback directive similar to Google Feedback
- * @version v1.0.2 - 2016-04-11 * @link https://github.com/jacobscarter/angular-feedback
+ * @version v1.0.2 - 2016-09-08 * @link https://github.com/jacobscarter/angular-feedback
  * @author Jacob Carter <jacob@ieksolutions.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
