@@ -1,10 +1,9 @@
 .feedback-btn {
-  font-size: 14px;
+  font-size: 12px;
 
   position: fixed;
-  right: 60px;
-  bottom: -3px;
-
+  right: -1px;
+  bottom: 170px;
   width: auto;
 }
 
@@ -205,13 +204,15 @@
 }
 
 .feedback-btn {
-  z-index: 40000;
+  z-index: 4000;
 
-  padding: 10px;
+  padding: 5px 10px;
 
   outline: 0;
   background-clip: padding-box;
   box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+  transform-origin: right bottom 0;
+  transform: rotate(270deg);
 }
 
 .feedback-btn-gray {
